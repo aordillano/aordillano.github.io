@@ -144,11 +144,11 @@ textarea::placeholder {
 
 #greeting {
   font-size: 45px;
-  margin: 0 auto;
+  margin: 0 5%;
 }
 
 #about {
-  max-width: 1000px;
+  margin: 0 5%;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: clamp(24px, 5vw, 64px);
@@ -179,6 +179,14 @@ textarea::placeholder {
     text-align: left;
 }
 
+#timeline h2 {
+    margin-left: 5%;
+}
+
+#timeline div {
+    margin: 0 5%;
+}
+
 #timeline ol {
     border-left: 3px solid var(--color-border);
     list-style: none;
@@ -188,6 +196,7 @@ textarea::placeholder {
     content: "";
     width: 12px;
     height: 12px;
+    margin: 0 5%;
     border-radius: 50%;
     background-color: var(--color-accent);
     position: absolute;
