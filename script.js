@@ -6,7 +6,25 @@ document
   });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const navLinks = document.getElementById("nav-links");
+  const navLinks = document.querySelector(".nav-links");
+  const hamburger = document.querySelector(".hamburger");
+  
+  hamburger.addEventListener("click", function() {
+    const isOpen = navLinks.classList.toggle("open");
+    hamburger.setAttribute("aria-expanded", isOpen);
+  });
+
+  navLinks.addEventListener("click", function () {
+    const isOpen = navLinks.classList.remove("open");
+    hamburger.setAttribute("aria-expanded", isOpen);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      const isOpen = navLinks.classList.remove("open");
+      hamburger.setAttribute("aria-expanded", isOpen);
+    }
+  });
 
   const expandButtons = document.querySelectorAll(".expand-btn");
 

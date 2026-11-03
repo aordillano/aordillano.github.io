@@ -20,16 +20,9 @@
 }
 
 body,
-header,
 section,
 footer {
   text-align: center;
-}
-
-header {
-  padding: 10px 0;
-  text-align: center;
-  position: relative;
 }
 
 h1,
@@ -52,17 +45,21 @@ section {
   padding: 20px;
 }
 
-nav ul {
-  list-style: none;
+header {
   color: var(--color-text);
   padding: 0;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 25px;
+  position: relative;
 }
 
-nav ul li {
-  margin: 0 10px;
+nav ul {
+    display: flex; 
+    gap: 10px;
+    list-style: none;
 }
 
 nav ul li a {
@@ -100,29 +97,48 @@ textarea::placeholder {
   color: var(--color-text-muted);
 }
 
-/* Responsive navbar for screens smaller than 768px */
-@media (max-width: 768px) {
-  #nav-links {
+.hamburger {
+    display: none;
     flex-direction: column;
-    width: 100%;
-  }
-
-  nav ul li {
-    text-align: center;
-    padding: 10px 0;
-  }
+    gap: 4px;
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
 }
 
-/* Additional responsive styles for smaller screens (max-width: 600px) */
-@media (max-width: 600px) {
-  nav ul li {
-    display: block;
-    margin-bottom: 5px;
-  }
+.hamburger span {
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-text);
+}
 
-  nav ul {
-    flex-direction: column;
-  }
+.nav-links {
+    display: flex;
+}
+
+@media screen and (max-width: 500px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: auto;
+        padding: 10px;
+        background-color: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
 }
 
 /* About section styling */
