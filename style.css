@@ -117,7 +117,7 @@ textarea::placeholder {
     display: flex;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 750px) {
     .hamburger {
         display: flex;
     }
@@ -174,25 +174,25 @@ textarea::placeholder {
     }
 }
 
-#timeline {
+#experience {
     background-color: var(--color-surface);
-    text-align: left;
 }
 
-#timeline h2 {
+#experience h2 {
     margin-left: 5%;
 }
 
-#timeline div {
-    margin: 0 5%;
+#experience div {
+  margin: 0 5%;
+  text-align: left;
 }
 
-#timeline ol {
+#experience ol {
     border-left: 3px solid var(--color-border);
     list-style: none;
 }
 
-#timeline ol li::before {
+#experience ol li::before {
     content: "";
     width: 12px;
     height: 12px;
@@ -203,26 +203,87 @@ textarea::placeholder {
     left: 15px;
 }
 
-#timeline date {
+#experience date {
     color: var(--color-highlight);
 }
 
-#timeline p {
+#experience p {
     color: var(--color-text-muted);
 }
 
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 5%;
+}
+
+@media (min-width: 1200px) {
+  .skills-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.skills-container {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skills-list li {
+  background-color: var(--color-border);
+  color: var(--color-text);
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.skills-list img {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
 #education {
-  padding: 20px;
+  background-color: var(--color-surface);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* padding: 20px; */
+  margin: 20px auto;
+}
+
+.education-container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  margin: 0 5%;
 }
 
 .school {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 1000px;
+  text-align: left;
+}
+
+#honors-college {
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.gpa-and-date {
+  text-align: right;
+  color: var(--color-text-muted);
+  align-self: flex-end;
 }
 
 /* Responsive styles for the education section on smaller screens */
@@ -318,32 +379,6 @@ textarea::placeholder {
 #contact-info {
   margin: 20px 0;
   padding: 20px;
-}
-
-#skills {
-  margin: 40px 0;
-}
-
-.skills-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.skills-list li {
-  background-color: var(--color-accent);
-  color: var(--color-bg);
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: var(--radius-pill);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s;
-}
-
-.skills-list li:hover {
-  background-color: var(--color-accent-hover);
 }
 
 footer {
