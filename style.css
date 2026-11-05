@@ -77,13 +77,6 @@ a:hover {
   text-decoration: underline;
 }
 
-input,
-textarea {
-  background-color: inherit;
-  color: inherit;
-  font-family: inherit;
-}
-
 button {
   background-color: var(--color-accent);
   color: var(--color-bg);
@@ -91,11 +84,6 @@ button {
 
 button:hover {
   background-color: var(--color-accent-hover);
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: var(--color-text-muted);
 }
 
 .hamburger {
@@ -155,22 +143,47 @@ textarea::placeholder {
   align-items: center;
 }
 
-#about img {
+#about-img {
   border-radius: var(--radius-pill);
   width: 150px;
   height: auto;
   border: 3px solid var(--color-border);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+#about ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+#about ul li {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  padding: 5px;
+}
+
+#about ul li img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
 }
 
 #about p {
     text-align: left;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     #about {
         grid-template-columns: 1fr;
-        gap: 0;
+        gap: 10px;
     }
 }
 
@@ -297,12 +310,6 @@ textarea::placeholder {
   }
 }
 
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .project {
   background-color: var(--color-surface);
   flex-basis: calc(33.333% - 20px);
@@ -313,6 +320,13 @@ textarea::placeholder {
   border-radius: var(--radius-lg);
   position: relative;
   overflow: hidden;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 5%;
 }
 
 .project img {
@@ -350,39 +364,8 @@ textarea::placeholder {
   margin-bottom: 15px;
 }
 
-#contact-form {
-  max-width: 500px;
-  margin: auto;
-}
-
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-}
-
-#contact-form textarea {
-  height: 150px;
-}
-
-#contact-form button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-}
-
-#contact-info {
-  margin: 20px 0;
-  padding: 20px;
-}
-
-footer {
+/* footer {
   text-align: center;
   padding: 20px;
   color: var(--color-text);
-}
+} */
